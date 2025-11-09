@@ -4,12 +4,14 @@ import Header from "./Header";
 
 function AppLayout() {
   return (
-    <div>
+    <div className="grid h-screen grid-rows-[auto_1fr_auto]">
       <Header />
 
-      <main>
-        <Outlet />
-      </main>
+      <div className="overflow-scroll">
+        <main className="max-w-3xl mx-auto">
+          <Outlet />
+        </main>
+      </div>
 
       <CartOverview />
     </div>
